@@ -1,9 +1,11 @@
-jdk:
-  - oraclejdk8
+language: java
+jdk: oraclejdk8
 
 services:
   - docker
 
 script:
+
+ - mvn clean install --PbuilderDocker
  - docker-compose up -d
  - docker image ls
