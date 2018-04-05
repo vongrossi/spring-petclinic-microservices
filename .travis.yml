@@ -6,3 +6,4 @@ services:
 
 script:
   - mvn test -B
+  - mvn clean install -PbuildDocker
