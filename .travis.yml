@@ -5,5 +5,4 @@ services:
   - docker
 
 script:
-  - mvn test -B
   - docker-compose up -d 
