@@ -5,6 +5,6 @@
 language: java
 script:
  - mvn test
- - mvn clean install -PbuildDocker
+# - mvn clean install -PbuildDocker
 jdk:
  - oraclejdk8
