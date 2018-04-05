@@ -33,7 +33,6 @@
         <java.version>1.8</java.version>
 
 		<docker.image.prefix>concreteangelogrossi</docker.image.prefix>
-        <docker.image.exposed.port>9090</docker.image.exposed.port>
         <docker.image.dockerfile.dir>${basedir}</docker.image.dockerfile.dir>
 		<docker.plugin.version>0.4.13</docker.plugin.version>
     </properties>
