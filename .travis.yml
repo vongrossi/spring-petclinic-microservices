@@ -7,5 +7,5 @@ services:
 script:
  # - docker-compose up -d 
  
- - mvn clean install -PbuildDocker -X
+ - mvn clean install -PbuildDocker
  - docker image ls
