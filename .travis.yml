@@ -6,7 +6,7 @@ services:
   - docker
 
 script:
-- export DOCKER_HOST=unix:///var/run/docker.sock
+  - export DOCKER_HOST=unix:///var/run/docker.sock
 
  #- mvn -v 
  #- java -version
