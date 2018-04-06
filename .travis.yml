@@ -7,7 +7,7 @@ services:
 
 script:
   - pwd
-  #- ls 
+  - ls la /var/run/ 
   # - docker pull maven:3.5.3-jdk-8
   # - docker image ls 
   # - docker container run -v "$(pwd)":/app -w /app maven:3.5.3-jdk-8 
