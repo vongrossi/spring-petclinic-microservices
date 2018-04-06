@@ -11,17 +11,17 @@ env:
   
 
 script:
-  - pwd
-  - ls 
+  #- pwd
+  #- ls 
   - export DOCKER_HOST=localhost
-  # - docker container run -v "$(pwd)":/app -w /app -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn clean install -PbuildDocker -DskipTests
+  - docker container run -v "$(pwd)":/app -w /app maven:3.5.3-jdk-8 mvn clean install -PbuildDocker -DskipTests
   # - export DOCKER_HOST=unix:///var/run/docker.sock 
   #- ls /var/run/
   #- echo $DOCKER_HOST
   #- mvn -v 
   #- java -version
   #- mvn clean install
-  - mvn clean install -PbuildDocker -DSkipTests 
+  #- mvn clean install -PbuildDocker -DSkipTests 
   #- docker-compose up -d
   #- docker image ls
 
