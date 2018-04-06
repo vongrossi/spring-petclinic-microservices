@@ -6,13 +6,12 @@ services:
   - docker
 
 script:
-- ls /var/run/
-
+#- export DOCKER_HOST=unix:///var/run/docker.sock
 
  #- mvn -v 
  #- java -version
  #- mvn clean install
- #- mvn clean install -PbuildDocker -DSkipTests 
+ - DOCKER_HOST=unix:///var/run/docker.sock mvn clean install -PbuildDocker -DSkipTests 
  #- docker-compose up -d
  #- docker image ls
 
