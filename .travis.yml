@@ -5,7 +5,6 @@ jdk: oraclejdk8
 services:
   - docker
 
-
 script:
   #- pwd
   #- ls 
