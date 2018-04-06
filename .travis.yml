@@ -18,7 +18,7 @@ script:
   #- docker container run -d maven:3.5.3-jdk-8
   
   #
-  - docker container run -v "$(pwd)":/app -w /app -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 
+  - docker container run -v "$(pwd)":/app -w /app maven:3.5.3-jdk-8 
   - docker container ls 
   - docker container exec $(docker container ls -qa) mvn clean install -PbuildDocker -DskipTests
  #
