@@ -7,7 +7,7 @@ services:
 
 script:
  #- java -version
-  - mvn clean install
- #- mvn clean install --PbuilderDocker
+ #- mvn clean install
+ - mvn clean install -PbuilderDocker
  #- docker-compose up -d
  #- docker image ls
