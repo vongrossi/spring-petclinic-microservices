@@ -10,11 +10,11 @@ env:
 
 script:
  #- export DOCKER_HOST=unix:///var/run/docker.sock
- echo $DOCKER_HOST
+
  #- mvn -v 
  #- java -version
  #- mvn clean install
- #- mvn clean install -PbuildDocker -DSkipTests 
+   - mvn clean install -PbuildDocker -DSkipTests 
  #- docker-compose up -d
  #- docker image ls
 
