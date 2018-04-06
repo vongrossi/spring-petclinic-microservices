@@ -12,7 +12,7 @@ script:
   #- docker pull maven:3.5.3-jdk-8
   #- docker image ls 
   #- docker container run -d maven:3.5.3-jdk-8
-  - travis.sh
+  - sh travis.sh
   #
   #- docker container run -v "$(pwd)":/app -w /app maven:3.5.3-jdk-8 
   # docker container ls 
