@@ -11,3 +11,10 @@ script:
  - mvn clean install -PbuilderDocker
  #- docker-compose up -d
  - docker image ls
+
+
+notifications:
+  #slack:
+  #  on_success: always
+  email:
+    - angelo.grossi@concrete.com.br
