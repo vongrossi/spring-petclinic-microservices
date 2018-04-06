@@ -14,7 +14,7 @@ script:
   #- pwd
   #- ls 
   - export DOCKER_HOST=localhost
-  - docker container run -v "$(pwd)":/app -w /app maven:3.5.3-jdk-8 mvn clean install -PbuildDocker -DskipTests
+  - docker run -v .:/app -w /app maven:3.5.3-jdk-8 mvn clean install -PbuildDocker -DskipTests
   # - export DOCKER_HOST=unix:///var/run/docker.sock 
   #- ls /var/run/
   #- echo $DOCKER_HOST
