@@ -9,10 +9,10 @@ services:
   
 
 script:
- - docker container run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$(pwd)":/app -w /app -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn clean install -PbuildDocker -DskipTests
- # - export DOCKER_HOST=unix:///var/run/docker.sock
- # - ls /var/run/
- # - echo $DOCKER_HOST
+ # - docker container run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$(pwd)":/app -w /app -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn clean install -PbuildDocker -DskipTests
+  - export DOCKER_HOST=unix:///var/run/docker.sock
+  - ls /var/run/
+  - echo $DOCKER_HOST
  #- mvn -v 
  #- java -version
  #- mvn clean install
