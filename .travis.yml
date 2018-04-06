@@ -7,12 +7,12 @@ services:
 
 script:
   - pwd
-  - ls la /var/run/ 
-  # - docker pull maven:3.5.3-jdk-8
-  # - docker image ls 
-  # - docker container run -v /home/travis/build/concrete-angelo-grossi/spring-petclinic-microservices/:/app -w /app maven:3.5.3-jdk-8 
-  # - docker container ls 
-  # - docker container exec $(docker container ls -qa) ls -la /var/run/
+  # - ls la /var/run/ 
+   - docker pull maven:3.5.3-jdk-8
+   - docker image ls 
+   - docker container run -v /home/travis/build/concrete-angelo-grossi/spring-petclinic-microservices/:/app -w /app maven:3.5.3-jdk-8 
+   - docker container ls 
+   - docker container exec $(docker container ls -qa) ls -la /var/run/
  
   #- docker container exec $(docker container ls -qa) mvn clean install -PbuildDocker -DskipTests
  
