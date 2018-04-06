@@ -10,8 +10,8 @@ script:
  - mvn -v 
  #- java -version
  #- mvn clean install
- - mvn clean install -PbuildDocker -DSkipTests
- #- docker-compose up -d
+ #- mvn clean install -PbuildDocker -DSkipTests
+ - docker-compose up -d
  - docker image ls
 
 
