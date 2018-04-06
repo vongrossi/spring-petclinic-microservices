@@ -15,7 +15,11 @@ script:
   #- ls 
   - docker pull maven:3.5.3-jdk-8
   - docker image ls 
-  
+  - docker container run -d maven:3.5.3-jdk-8
+  - docker container ls 
+ 
+ 
+ 
   # - export DOCKER_HOST=unix:///var/run/docker.sock 
   #- ls /var/run/
   #- echo $DOCKER_HOST
