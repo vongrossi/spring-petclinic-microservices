@@ -10,4 +10,4 @@ script:
  #- mvn clean install
  - mvn clean install -PbuilderDocker
  #- docker-compose up -d
- #- docker image ls
+ - docker image ls
