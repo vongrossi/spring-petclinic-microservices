@@ -7,12 +7,12 @@ services:
 
 script:
 
- - mvn -v 
+ #- mvn -v 
  #- java -version
  #- mvn clean install
- #- mvn clean install -PbuildDocker -DSkipTests
- - docker-compose up -d
- - docker image ls
+ - mvn clean install -PbuildDocker -DSkipTests -X
+ #- docker-compose up -d
+ #- docker image ls
 
 
 notifications:
