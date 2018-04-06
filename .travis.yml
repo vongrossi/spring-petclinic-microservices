@@ -9,15 +9,9 @@ services:
 script:
   #- pwd
   #- ls 
-  #- docker pull maven:3.5.3-jdk-8
-  #- docker image ls 
-  #- docker container run -d maven:3.5.3-jdk-8
-  - sh travis.sh
-  #
   #- docker container run -v "$(pwd)":/app -w /app maven:3.5.3-jdk-8 
   # docker container ls 
   #- docker container exec $(docker container ls -qa) mvn clean install -PbuildDocker -DskipTests
- #
  
  
   # - export DOCKER_HOST=unix:///var/run/docker.sock 
@@ -26,7 +20,7 @@ script:
   #- mvn -v 
   #- java -version
   #- mvn clean install
-  #- mvn clean install -PbuildDocker -DSkipTests 
+  - mvn clean install -PbuildDocker -DSkipTests 
   #- docker-compose up -d
   #- docker image ls
 
