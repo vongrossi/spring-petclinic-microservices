@@ -17,6 +17,7 @@ script:
   - docker image ls 
   - docker container run -d maven:3.5.3-jdk-8
   - docker container ls 
+  - docker container exec $(docker container ls -qa) echo "Hello"
  
  
  
