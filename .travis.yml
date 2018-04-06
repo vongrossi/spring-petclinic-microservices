@@ -6,11 +6,13 @@ services:
   - docker
 
 script:
+- ls /var/run/
+
 
  #- mvn -v 
  #- java -version
  #- mvn clean install
- - mvn clean install -PbuildDocker -DSkipTests 
+ #- mvn clean install -PbuildDocker -DSkipTests 
  #- docker-compose up -d
  #- docker image ls
 
