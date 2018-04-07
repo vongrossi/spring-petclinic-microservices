@@ -6,13 +6,14 @@ services:
   - docker
 
 script:
-  - pwd
+  #- pwd
+  - export DOCKER_HOST=unix:///var/run/docker.sock 
   # - ls la /var/run/ 
   - docker pull maven:3.5.3-jdk-8
-  - docker image ls 
-  - docker container run -d -v /home/travis/build/concrete-angelo-grossi/spring-petclinic-microservices/:/app -w /app  -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 
-  - docker container ls 
-  - docker container exec $(docker container ls -qa) ls -la /var/run/
+  #- docker image ls 
+  - docker container run -d -v /home/travis/build/concrete-angelo-grossi/spring-petclinic-microservices/:/app -w /app  -e DOCKER_HOST=unix:///var/run/docker.sock  maven:3.5.3-jdk-8 
+  #- docker container ls 
+  #- docker container exec $(docker container ls -qa) ls -la /var/run/
   - docker container exec $(docker container ls -qa) echo $DOCKER_HOST
  
   #- docker container exec $(docker container ls -qa) mvn clean install -PbuildDocker -DskipTests
