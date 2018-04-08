@@ -11,7 +11,7 @@ script:
   # - ls la /var/run/ 
   - docker pull maven:3.5.3-jdk-8
   #- docker image ls 
-  - docker container run -v /var/run/docker.sock:/var/run/docker.sock -v /home/travis/build/concrete-angelo-grossi/spring-petclinic-microservices/:/app -w /app  -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn install -PbuildDocker -DskipTests
+  - docker container run -v /var/run/docker.sock:/var/run/docker.sock -v /home/travis/build/concrete-angelo-grossi/spring-petclinic-microservices/:/app -w /app -p 9090:9090 -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn install -PbuildDocker -DskipTests
   
   #- docker container ls 
   #- docker container exec $(docker container ls -qa) ls -la /var/run/
