@@ -10,10 +10,10 @@ jobs:
       - run:
           name: Build Image
           command: |
-            pwd
-            #docker pull maven:3.5.3-jdk-8
+            #pwd
+            docker pull maven:3.5.3-jdk-8
             #docker image ls
-            # docker container run --rm -v "$(PWD)"/:/app -w /app -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn install -PbuildDocker -DskipTests
+            docker container run --rm -v /spring-petclinic-microservices/:/app -w /app -e DOCKER_HOST=unix:///var/run/docker.sock maven:3.5.3-jdk-8 mvn install -PbuildDocker -DskipTests
       - deploy:
           name: Push application Docker image
           command: |
