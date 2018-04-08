@@ -1,12 +1,12 @@
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
-      
-      
-      # run tests!
-      - run: mvn clean install -PbuildDocker -DskipTests
+machine:
+    java:
+        version: openjdk8
+general:
+    artifacts:
+        - "target/java-demo.war"
+test:
+    post:
+        - mvn clean install
+        - mvn clean install -PbuildDocker -DskipTests
       
       
