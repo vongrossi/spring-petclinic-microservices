@@ -37,4 +37,10 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
         
       # run tests!
-      - run: mvn install -PbuildDocker
+      - run: mvn install
+      
+      - setup_remote_docker
+ 
+      - run:
+          name: Build Docker Image
+          command: ./gradlew bootRepackage -Pprod buildDocker
