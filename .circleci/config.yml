@@ -43,5 +43,5 @@ jobs:
  
       - run:
           name: Build Docker Image
-          command: ./gradlew bootRepackage -Pprod buildDocker
+          command: mvn -PbuildDocker
  
